@@ -8,8 +8,8 @@ public class MyProperties extends ListResourceBundle {
         return new Object[][]{
                 {"JDBC_DRIVER", "com.mysql.jdbc.Driver"},
                 {"DATABASE_URL", "jdbc:mysql://localhost/luxsoft"},
-                {"DB_USER", "dp_ua"},
-                {"DB_PASS", "gfhjkm"},
+                {"DB_USER", "springuser"},
+                {"DB_PASS", "ThePassword"},
         };
     }
 }
