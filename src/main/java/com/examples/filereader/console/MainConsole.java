@@ -55,12 +55,12 @@ public class MainConsole {
                     int count = 0;
                     if (id > 0) {
                         for (InfoCollector i : list) {
-                            jdbcService.saveLineInfo(id, i);
+                            jdbcService.saveLineInfo(id, i, count);
                             count++;
                         }
                     }
                     console.write("Info about " + inputLine + " inserted in table with id: " + id + ".\n" +
-                            " Lines count info inserted in table: " + count);
+                            " Lines info inserted in table. Count lines: " + count);
 
                 } catch (IOException e) {
                     e.printStackTrace();

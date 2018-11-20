@@ -13,6 +13,15 @@ public class LineInfo {
     @NotNull
     private Integer id;
 
+    public int getLineNumber() {
+        return lineNumber;
+    }
+
+    public void setLineNumber(int lineNumber) {
+        this.lineNumber = lineNumber;
+    }
+
+    private int lineNumber;
     private int fileID;
     private int wordsCount;
     private int length;
@@ -44,11 +53,11 @@ public class LineInfo {
         this.wordsCount = wordsCount;
     }
 
-    public int getLenght() {
+    public int getLength() {
         return length;
     }
 
-    public void setLenght(int length) {
+    public void setLength(int length) {
         this.length = length;
     }
 

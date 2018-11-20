@@ -1,0 +1,23 @@
+<html>
+
+<body>
+<!--<div>-->
+    <!--<form method="post">-->
+        <!--<input type="text" name="name" placeholder="Input Username:"/>-->
+        <!--<button type="submit">Add</button>-->
+    <!--</form>-->
+<!--</div>-->
+<div><h1>Statistics of all lines in the file:</h1></div>
+
+{{#lines}}
+<div>
+    <b> {{lineNumber}}: </b>
+    <span>words count: {{wordsCount}}</span>
+    <span>longest word: {{longestWord}}</span>
+    <span>shortest word: {{shortestWord}}</span>
+
+</div>
+{{/lines}}
+
+</body>
+</html>

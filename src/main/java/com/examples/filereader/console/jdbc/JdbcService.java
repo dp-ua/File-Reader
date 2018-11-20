@@ -14,10 +14,10 @@ public class JdbcService {
     }
 
 
-    public int saveLineInfo(int fileID, InfoCollector lineInfo) throws SQLException, ClassNotFoundException {
+    public int saveLineInfo(int fileID, InfoCollector lineInfo, int line_number) throws SQLException, ClassNotFoundException {
         String sql = "INSERT INTO line_info " +
-                "(fileid, words_count, length, longest_word, shortest_word, average) " +
-                "VALUES (?,?,?,?,?,?)";
+                "(fileid, words_count, length, longest_word, shortest_word, average,  line_number) " +
+                "VALUES (?,?,?,?,?,?,?)";
 
         try (
                 PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -28,6 +28,7 @@ public class JdbcService {
             statement.setString(4, lineInfo.getLongestWord());
             statement.setString(5, lineInfo.getShortestWord());
             statement.setDouble(6, lineInfo.averageWordLength);
+            statement.setDouble(7, line_number);
 
             int affectedRows = statement.executeUpdate();
 
@@ -62,6 +63,7 @@ public class JdbcService {
             statement.setString(6, fileInfo.getShortestWord());
             statement.setDouble(7, fileInfo.averageWordLength);
             statement.setInt(8, fileInfo.linesCount);
+
 
             int affectedRows = statement.executeUpdate();
 
