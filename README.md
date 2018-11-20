@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/dp-ua/Good-Morning.svg?branch=master)](https://travis-ci.org/dp-ua/Good-Morning)
+
 # Project "File Reader"
 ## Take informations about file and save it to JDBC
 ## Show in web all saved data
